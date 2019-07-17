@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>example</title>
+
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+  <ul id="content-list"></ul>
+  <script>/* IE9+ ajax: atto({url: '/', method: 'GET', data: '', headers: {key: 'value'}}) .done(...) .error(...).finally(...) */
+window.atto=function(e){var n,r,t,o=new XMLHttpRequest;o.open(e.method||"GET",e.url,!0),o.onload=function(){o.status>=200&&o.status<400?n&&n(o.responseText,o):r&&r(new Error(o.responseText||o.statusText),o),t&&t(null,o)};for(var s in e.headers)e.headers.hasOwnProperty(s)&&o.setRequestHeader(s,e.headers[s]);return o.onerror=function(){var e=new Error("Connection error");r&&r(e,{}),t&&t(e)},setTimeout(function(){o.send(e.data)}),{done:function(e){return n=e,this},error:function(e){return r=e,this},finally:function(e){return t=e,this}}};</script>
+  <script src="main.js"></script>
+</body>
+</html>
